@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore - Book Details</title>
+</head>
+<body>
+    <h1>Book Details</h1>
+    {% if book %}
+        <p><strong>Title:</strong> {{ book.title }}</p>
+        <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+        <p><strong>Publish_Year:</strong> {{ book.year }}</p>
+        <p><strong>Price:</strong> {{ book.price}}</p>
+        <p><strong>Number_of_Pages:</strong> {{ book.page }}</p>
+        <p><strong>Publisher_name:</strong> {{ book.publisher.name }}</p>
+        <p><strong>Publish_location:</strong> {{ book.publisher.location }}</p>
+        <p><strong>Author:</strong> {{ book.author.name }}</p>
+        <p><strong>Cover Photo:</strong> <img src="{{ book.coverPhoto }}" alt="Cover Photo"></p>
+        <!-- Display more book details -->
+    {% else %}
+        <p>Book not found.</p>
+    {% endif %}
+    <p><a href="{{ url_for('index') }}">Back to All Books</a></p>
+</body>
+</html>
+

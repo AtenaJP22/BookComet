@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Book Price - {{ book.title }}</title>
+</head>
+<body>
+    <h1>Update Book Price</h1>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+
+    <form method="post" action="{{ url_for('update_book', isbn=book.isbn) }}">
+        <label for="price">Price:</label>
+        <input type="text" name="price" value="{{ book.price }}" required><br>
+
+        <button type="submit">Update Price</button>
+    </form>
+
+    <p><a href="{{ url_for('book_details', isbn=book.isbn) }}">Back to Book Details</a></p>
+</body>
+</html>
+
+
+
+
+
+
+
