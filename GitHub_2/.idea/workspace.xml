@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="52913b3c-aec4-45f2-bc5f-af4bc2525407" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/msdocs-python-flask-webapp-quickstart/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/msdocs-python-flask-webapp-quickstart/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msdocs-python-flask-webapp-quickstart/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/msdocs-python-flask-webapp-quickstart/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msdocs-python-flask-webapp-quickstart/templates/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/msdocs-python-flask-webapp-quickstart/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/msdocs-python-flask-webapp-quickstart/templates/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/msdocs-python-flask-webapp-quickstart" />
+  </component>
+  <component name="ProjectId" id="2akFXP2YsB8yxyTAHEKjsWTUftQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+</project>
