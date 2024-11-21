@@ -117,3 +117,21 @@ Setting Up Azure Kubernetes Service
 
 After logging in to Azure portal, a Kubernetes Service resource named BookComet_Cluster is created. Then, a single image web app is created and the container (MyRegistry2024P) and the image is selected. An automatic .yaml file (YAML_5.text) is then created for the deployment. Keep is selected for the app.
 
+# ⚠️ Attention Required!
+
+For security reasons, the app.py file has been modified to exclude the Azure Cosmos DB connection key. Instead, users are required to provide the key manually when running the application.
+
+Steps to Provide the Key:
+
+1. Create a .env file in the root directory of the project.
+
+2. Add the following line to your .env file:
+
+makefile
+
+COSMOS_URI=your_cosmos_db_connection_string
+
+3. Save the file and proceed to run the application as instructed.
+
+This approach ensures that sensitive information is not stored in the codebase, maintaining security best practices.
+
