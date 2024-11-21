@@ -1,14 +1,12 @@
 # BookComet
 Building and Deploying a Containerized Python Application with Flask and MongoDB on Azure Kubernetes Service (AKS)
 
-Introduction
-
+# Introduction
 Books are one of the oldest means of sharing knowledge in human history. From ancient scrolls to kindles, there has always been a similar pattern: words and sentences, symbols, numbers, visualizations, etc. This shows the importance of finding an effective way to represent, share and store these blocks of knowledge, called books.
 Considering the advances of Information Technology (IT), cloud-based online applications are a modern and easy way for the users to access books to buy/borrow them for reading.
 
 
-Abstract
-
+# Abstract
 The aim of the project is to build and deploy a Containerized Python Application with Flask and MongoDB on Azure Kubernetes Service (AKS). 
 For this purpose, first the data should be retrieved and stored in a proper format (through Azure CosmosDB Cloud shell (in Javascript)) which has been explained below in Data Retrieval. 
 After the extension of MongoDB for Visual Studio Code was installed, and through the connection string, VSCode was connected to the Azure CosmosDB and the database was accessed and tested by some sample queries. 
@@ -17,7 +15,7 @@ The image containing the python app was built. After logging into the azure acco
 After that, a Kubernetes service and cluster is created on Azure. A single-image web app is created as the corresponding ACR and the pushed image is selected. The .yaml file is downloaded, and the app is kept.
 Under the Kubernetes resources in the cluster, services and ingresses is selected. After clicking on the app name, the External IP can be observed.
 
-Azure Cosmos DB Set-up & Data Retrieval
+# Azure Cosmos DB Set-up & Data Retrieval
 
 After creating an Azure CosmosDB resource on Azure portal,  the Bookstore database is created. It uses an Azure server in North Europe (Ireland) region.
  
@@ -38,7 +36,7 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-# Replace these values with your Cosmos DB connection string and database/collection details
+#Replace these values with your Cosmos DB connection string and database/collection details
 
 cosmos_uri = "******************************************"
 
@@ -52,7 +50,7 @@ books_collection = db["books"]
 Writing the Python Script & Necessary Files for Creating the Web-app
 i.e. .dockerignore, app.py, requirements.txt, gunicorn.conf.py, html templates
 
-app.py: 
+# app.py: 
 Includes the app routes, the python script for performing CRUD operations on the database. When the app.py is running, the local website can be accessed. The web app can be accessed locally on http://127.0.0.1:5001/ .
 The html Templates 
 The .html files were added for providing a simpler and more clear interface for the user.
@@ -62,9 +60,9 @@ The .html files were added for providing a simpler and more clear interface for 
 def index() #which fetches all books and displays them
 
 
-The CRUD Operations
+# The CRUD Operations
 Each app route in app.py redirects to one of the html templates:
-Create
+# Create
 
 @app.route('/add_book', methods=['GET', 'POST'])
 def add_book()
@@ -77,17 +75,17 @@ Insert the field values in the corresponding boxes for every field, then press A
 The book has been added to the end of the books and is now displayed on the main page. 
 It has also been added as a document to the books collection in bookstore database in Azure Cosmos DB.
 
-Read
+# Read
 @app.route('/book/<isbn>')
 def book_details(isbn): 
-# Fetches and displays details of a specific book
+#Fetches and displays details of a specific book
 book_details.html
 
 For the Read operation, simply click on the title of the book in the main page.
 
 View all the available information and details on the book, including the cover image:
 
-Update
+# Update
 @app.route('/update_book/<isbn>', methods=['GET', 'POST'])
 def update_book(isbn)
 update_book.html
@@ -98,7 +96,7 @@ Update the value, and press Update again. The updates would be applied to the we
 
 Please note that after a book is published in real life, fields like ISBN, book title, publish year and author’s name cannot be changed. However, values like price, can keep getting updated as time goes on. This is why the Price field was used for the update operation.
 
-Delete
+# Delete
 @app.route('/delete_book/<isbn>', methods=['GET', 'POST'])
 def delete_book(isbn)
 delete_book.html
