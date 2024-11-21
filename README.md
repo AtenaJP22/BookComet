@@ -1,5 +1,5 @@
 # BookComet
-Building and Deploying a Containerized Python Application with Flask and MongoDB on Azure Kubernetes Service (AKS)
+Built and Deployed a Containerized Python Application with Flask and MongoDB on Azure Kubernetes Service (AKS), Azure CosmosDB was utilized as the database.
 
 # Introduction
 Books are one of the oldest means of sharing knowledge in human history. From ancient scrolls to kindles, there has always been a similar pattern: words and sentences, symbols, numbers, visualizations, etc. This shows the importance of finding an effective way to represent, share and store these blocks of knowledge, called books.
